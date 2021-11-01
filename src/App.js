@@ -12,6 +12,7 @@ function App() {
 
     onSubmit: values =>{
       console.log('form:',values);
+      alert('Login Successful');
     },
 
     validate: values =>{
@@ -38,8 +39,7 @@ function App() {
         <div id="pswField">Password:</div>
         <input type="text" name="password" onChange={formik.handleChange} value={formik.values.password}/><br/>
         {formik.errors.password ? <div id="pswError" style={{color:'red'}}>{formik.errors.password}</div> : null}                
-        <button id="submitBtn" type="submit"  
-        onClick={() => formik.validateForm().then(() => alert('Login Successful'))}>Submit</button>
+        <button id="submitBtn" type="submit">Submit</button>
        
       </form> 
            
